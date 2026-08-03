@@ -1,4 +1,3 @@
-
 def bold_text(func):
     def wrapper(*args, **kwargs):
         return "**" + func(*args, **kwargs) + "**"
