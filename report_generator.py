@@ -64,11 +64,9 @@ def fancy_template(report):
 
 def main():
 
-    # Add templates
     Report.add_template("simple", simple_template)
     Report.add_template("fancy", fancy_template)
 
-    # Create reports
     report1 = Report(
         "Annual Report",
         "Sales increased by 20 percent."
@@ -79,22 +77,18 @@ def main():
         "Profit reached 10 lakh rupees."
     )
 
-    # Generate reports
     print("\nSimple Template\n")
     print(report1("simple"))
 
     print("\nFancy Template\n")
     print(report1("fancy"))
 
-    # __str__
     print("\nUsing __str__")
     print(report1)
 
-    # __repr__
     print("\nUsing __repr__")
     print(repr(report1))
 
-    # __add__
     print("\nCombining Reports (__add__)")
     combined = report1 + report2
     print(combined("simple"))
